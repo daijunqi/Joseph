@@ -33,6 +33,7 @@ public class Base {
             now += count;
             if (now + 1 > size) {
                 now = (now + 1) % size - 1;
+                now = now < 0 ? size : now;
             }
             remove(now);
             now--;
